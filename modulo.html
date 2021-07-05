@@ -1,0 +1,149 @@
+<script>
+    function search_animal() {
+        let input = document.getElementById('searchbar').value
+        input=input.toLowerCase();
+        let x = document.getElementsByClassName('animals');
+          
+        for (i = 0; i < x.length; i++) { 
+            if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                x[i].style.display="none";
+            }
+            else {
+                x[i].style.display="";                 
+            }
+        }
+    }
+
+     function search_f() {
+       // FECHA_I=document.getElementById("FECHA_I").value;
+       let input = document.getElementById("start").value;
+          let x = document.getElementsByClassName('animals');
+       /* let input = document.getElementById('searchbar').value
+        input=input.toLowerCase();
+        let x = document.getElementsByClassName('animals');*/
+          
+        for (i = 0; i < x.length; i++) { 
+            if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                x[i].style.display="none";
+            }
+            else {
+                x[i].style.display="";                 
+            }
+        }
+    }
+    </script>
+    <style>
+    #searchbar{
+         margin-left: 15%;
+         padding:15px;
+         border-radius: 10px;
+       }
+     
+       input[type=text] {
+          width: 30%;
+          -webkit-transition: width 0.15s ease-in-out;
+          transition: width 0.15s ease-in-out;
+       }
+     
+       /* When the input field gets focus,
+            change its width to 100% */
+       input[type=text]:focus {
+         width: 40%;
+       }
+     
+      #list{
+        font-size:  1.5em;
+        margin-left: 90px;
+       }
+     
+    .animals {
+        padding: 3px 10px;
+        border-radius: 20px;
+        font-family: "Lato",sans-serif;
+        font-size: 0.8em;
+        font-weight: 120;
+        word-wrap:normal;
+        text-align: left; 
+        line-height: 28px; 
+        border: rgb(0, 0, 0) 2px solid;  
+        width: 50%;
+      } 
+	
+    </style>
+    
+    <!DOCTYPE html>
+    <html lang=es>>
+          
+    <head>
+        <title>
+           Recomendaciones
+        </title>
+          
+        <!-- linking the stylesheet(CSS) -->
+        <link rel="stylesheet" type="text/css" href="./style.css">
+    </head>
+      
+    <body>
+        <select name="select">
+  <option value="2021">2021</option>
+  <option value="2018" selected>2018</option>
+  <option value="value3">Value 3</option>
+</select>
+        <!-- input tag -->
+        <input id="searchbar" onkeyup="search_animal()" type="text"
+            name="search" placeholder="Ingresa informacion a buscar">
+          
+        <!-- ordered list -->
+        <ol id='list'>
+			<figure  class="animals">12/2021&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Numero 01
+			  <figcaption>Año: 2018&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Documento:&nbsp;
+<button>PDF</button><br>
+				Asunto: Violacion LGBTQ<br>
+				Autoridad: Grajales Puebla Presidente&nbsp; &nbsp; &nbsp;&nbsp; <br>
+				Estado: En Seguimiento <br>
+				Recomendado:
+                <button>Comunicado</button>
+			  </figcaption></figure>
+            <figure  class="animals">02/2021&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Numero 02
+              <figcaption>Año: 2021&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Documento:&nbsp;
+  <button>PDF</button>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;<br>
+                Asunto: Violacion Derechos Laborales<br>
+                Autoridad:  Puebla Presidente <br>
+                Estado: En Seguimiento<br>
+                Recomendado:
+  <button>Comunicado</button></figcaption></figure>
+			<figure  class="animals">15/2021&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Numero 03
+			  <figcaption>Año: 2021&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Documento&nbsp;
+  <button>PDF</button> 
+			    <br>
+			    Asunto: Violacion al Suelo<br>
+			    Autoridad: Acajete Puebla Presidente&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br>
+			    Estado: En Seguimiento<br>
+			    Recomendado:
+		      <button>Comunicado</button></figcaption></figure>
+			<figure  class="animals">18/2021&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Numero 04
+			  <figcaption>Año: 2021&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Documento&nbsp;
+<button>PDF</button>
+		      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>Asunto: Violacion a la vida<br>
+				Autoridad: Libres Presidente <br>
+				Estado: En Seguimiento<br>
+				Recomendado:
+<button>Comunicado</button></figcaption></figure>
+			<figure  class="animals">17/2021&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Numero 05
+			  <figcaption>Año: 2021&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Documento&nbsp;
+<button>PDF&nbsp;</button>
+			    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+Asunto: Violación a la Salud<br>
+				Autoridad: ISSSTEP Presidente <br>
+				Estado: En Seguimiento <br>
+				Recomendado:
+<button>Comunicado</button></figcaption></figure>
+    
+        </ol>
+          
+        <!-- linking javscript -->
+        <script src="./animals.js"></script>
+    </body>
+      
+    </html>
